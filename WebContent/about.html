@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>个人博客</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/about.css" />
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="blog/jquery.page.js"></script>
+<script src="js/common.js"></script>
+
+<style type="text/css">
+#result {
+	width: 330px;
+	margin: 10px auto;
+	font-size: 24px;
+	color: green;
+	padding: 20px;
+}
+</style>
+
+</head>
+
+<body onload="showTime()">
+	<script>
+        function snow() {
+            var flake = document.createElement('div');
+            flake.innerHTML = '❆❆❆❆';
+            flake.style.cssText = 'position:absolute;color:#fff;';
+            var documentHieght = window.innerHeight;
+            var documentWidth = window.innerWidth;
+            var millisec = 100;
+            setInterval(function() { 
+                var startLeft = Math.random() * documentWidth;
+                var endLeft = Math.random() * documentWidth;
+                var flakeSize = 5 + 20 * Math.random();
+                var durationTime = 4000 + 7000 * Math.random();
+                var startOpacity = 0.7 + 0.3 * Math.random();
+                var endOpacity = 0.2 + 0.2 * Math.random();
+                var cloneFlake = flake.cloneNode(true);
+                cloneFlake.style.cssText += `
+                        left: ${startLeft}px;
+                        opacity: ${startOpacity};
+                        font-size:${flakeSize}px;
+                        top:-25px;
+                              transition:${durationTime}ms;
+                      `;
+                document.body.appendChild(cloneFlake);
+                setTimeout(function() {
+                    //第二次修改样式
+                    cloneFlake.style.cssText += `
+                                left: ${endLeft}px;
+                                top:${documentHieght}px;
+                                opacity:${endOpacity};
+                            `;
+                    setTimeout(function() {
+                        cloneFlake.remove();
+                    }, durationTime);
+                }, 0);
+
+            }, millisec);
+        }
+        snow();
+    </script>
+	<div class="w_header">
+		<div class="container">
+			<div class="w_header_top">
+				<a href="#" class="w_logo"></a> <span class="w_header_nav">
+					<ul>
+						<li><a href="index.html" class="active">首页</a></li>
+						<li><a href="about.html">关于</a></li>
+						<li><a href="article.html">成长</a></li>
+						<li><a href="#">学习</a></li>
+						<li><a href="fun.html">娱乐</a></li>
+						<li><a href="moodList.html">说说</a></li>
+						<li><a href="comment.html">留言</a></li>
+					</ul>
+				</span>
+				<div class="w_search">
+					<div class="w_searchbox">
+						<input type="text" placeholder="search" />
+						<button>搜索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="w_container">
+		<div class="container">
+			<div class="row w_main_row">
+
+				<ol class="breadcrumb w_breadcrumb">
+					<li><a href="#">首页</a></li>
+					<li class="active">关于我</li>
+					<li class="active">美景</li>
+					<span class="w_navbar_tip">前言—一个人至少为了自己要不顾一切去远方流浪！</span>
+				</ol>
+
+				<div class="focusbox">
+					<div class="contentbox">
+						<ul class="contentimg">
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight1.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight2.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight3.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight4.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight5.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight6.jpg"></a></li>
+							<li><a href="#"><img width="990" height="340"
+									src="img/sight7.jpg"></a></li>
+						</ul>
+					</div>
+
+					<div class="navbox">
+						<ul class="mfoc_nav">
+							<li _index="1" class="selected"><img width="137" height="53"
+								src="img/sight1.jpg" /></li>
+							<li _index="2"><img width="137" height="53"
+								src="img/sight2.jpg" /></li>
+							<li _index="3"><img width="137" height="53"
+								src="img/sight3.jpg" /></li>
+							<li _index="4"><img width="137" height="53"
+								src="img/sight4.jpg" /></li>
+							<li _index="5"><img width="137" height="53"
+								src="img/sight5.jpg" /></li>
+							<li _index="6"><img width="137" height="53"
+								src="img/sight6.jpg" /></li>
+							<li _index="7"><img width="137" height="53"
+								src="img/sight7.jpg" /></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="panel panel-default intro">
+					<strong class="btn-lg">博主自我简介</strong>
+					<h3 class="title">《我就是我不一样的烟火》</h3>
+					<p class="overView">本人性格开朗、稳重、有活力，待人热情、真诚。工作认真负责，积极主动，能吃苦耐劳；喜欢思考，虚心与人交流,以取长补短。有较强的组织能力、实际动手能力和团体协作精神，能迅速的适应各种环境，并融合其中。在实习期间善于把检验结果与病人具体病情结合分析;社会责任感强,踏实肯干,主动争取锻炼机会。</p>
+					<p class="overView">我不断地完善自己，提高自身素质。我在学好专业课与公共课的基础上，还阅读了大量的课外书籍，不断地增加新知识，陶冶情操、开拓视野。不仅如此，我还积极参加社会实践活动，和各种文体活动，培养了我一定的组织与社交能力。
+						对待工作认真负责，善于沟通、协调有较强的组织能力与团队精神；活泼开朗、乐观上进、有爱心并善于施教并行；上进心强、勤于学习能不断提高自身的能力与综合素质。在未来的工作中，我将以充沛的精力，刻苦钻研的精神来努力工作，稳定地提高自己的工作能力，与公司同步发展。
+						积极主动、独立性强、具有高度的责任感和敬业精神，待人真诚、诚实守信、团结协作意识强，能够吃苦耐劳，勇于挑战新事物，具有一定的开拓创新能力。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="result"></div>
+	<script type="text/javascript">
+		(function(jQuery) {
+			jQuery.fn.th_focus_swing = function(options) {
+				var defaults = {
+					time : 3500, //轮换秒数
+					index : 1, //默认第几张
+					speed : 500, //切换时间
+					dis : 1000,
+					splits : 1
+				//总标签
+				};
+				var opts = jQuery.extend(defaults, options);
+
+				var _index = opts.index;
+				var _time = opts.time;
+				var _speed = opts.speed;
+				var _dis = opts.dis;
+				var _splits = opts.splits;
+
+				var _this = jQuery(this);
+
+				var node_ul = _this.find(".contentimg");
+				var node_li = node_ul.find("li");
+				var node_li_desc = jQuery(".contentdesc").find("li");
+				var node_li_nav = jQuery(".mfoc_nav").find("li");
+
+				var li_len = node_li.length;
+
+				var _countIndex = (node_li.length / opts.split - 1)
+				var _start_left = node_ul.css("left");
+
+				var _timer = setInterval(show, _time);
+
+				init();
+				//alert(1);
+				function init() {
+					node_ul.mouseover(function() {
+						_timer = clearInterval(_timer);
+					}).mouseout(function() {
+						_timer = setInterval(show, _time);
+					});
+					node_li_desc.mouseover(function() {
+						_timer = clearInterval(_timer);
+					}).mouseout(function() {
+						_timer = setInterval(show, _time);
+					});
+
+					node_li_nav.mouseover(function() {
+						node_ul.stop(true, true);
+						node_li_desc.stop(true, true);
+						node_li_desc.eq(_index - 1).css("display", "none");
+						node_li_nav.eq(_index - 1).removeClass("selected");
+						_index = parseInt(jQuery(this).attr("_index"));
+						node_li_desc.eq(_index - 1).fadeIn(_speed);
+						node_li_nav.eq(_index - 1).addClass("selected");
+						_left = -_dis * (_index - 1);
+						node_ul.animate({
+							"left" : _left
+						}, _speed);
+						_timer = clearInterval(_timer);
+					}).mouseout(function() {
+						_timer = setInterval(show, _time);
+					});
+				}
+
+				function show() {
+					//alert(2);
+					node_ul.stop(true, true);
+					node_li_nav.eq(_index - 1).removeClass("selected");
+					node_li_desc.eq(_index - 1).css("display", "none");
+					_index++;
+					if (_index > li_len) {
+						node_ul.append(node_ul.find("li:lt(1)"));
+						node_ul.css("left", parseInt(node_ul.css("left"))
+								+ _dis);
+						node_li_nav.eq(0).addClass("selected");
+						node_li_desc.eq(0).fadeIn(_speed);
+					} else {
+						node_li_nav.eq(_index - 1).addClass("selected");
+						node_li_desc.eq(_index - 1).fadeIn(_speed);
+					}
+					var _left = parseInt(node_ul.css("left")) - _dis;
+					node_ul.animate({
+						"left" : _left
+					}, _speed, function() {
+						if (_index > li_len) {
+							node_ul.prepend(node_ul.find("li:gt("
+									+ (li_len - _splits - 1) + ")"));
+							node_ul.css("left", 0);
+							_index = 1;
+						}
+
+					});
+
+				}
+			}
+		})(jQuery);
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			//focus
+			$(".focusbox").th_focus_swing();
+		});
+	</script>
+
+	<script type="application/javascript">
+		
+		
+    /* 鼠标点击特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                    y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                        "top": y - 180,
+                        "opacity": 0
+                    },
+                    1500,
+                    function() {
+                        $i.remove();
+                    });
+        });
+    });
+	</script>
+
+	
+	<script type="text/javascript">
+		//定义函数：构建要显示的时间日期字符串
+		function showTime() {
+			//创建Date对象
+			var today = new Date();
+			//分别取出年、月、日、时、分、秒
+			var year = today.getFullYear();
+			var month = today.getMonth() + 1;
+			var day = today.getDate();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			//如果是单个数，则前面补0
+			month = month < 10 ? "0" + month : month;
+			day = day < 10 ? "0" + day : day;
+			hours = hours < 10 ? "0" + hours : hours;
+			minutes = minutes < 10 ? "0" + minutes : minutes;
+			seconds = seconds < 10 ? "0" + seconds : seconds;
+	
+			//构建要输出的字符串
+			var str = year + "年" + month + "月" + day + "日 " + hours + ":" + minutes
+					+ ":" + seconds;
+	
+			//获取id=result的对象
+			var obj = document.getElementById("result");
+			//将str的内容写入到id=result的<div>中去
+			obj.innerHTML = str;
+			//延时器
+			window.setTimeout("showTime()", 1000);
+		}
+	</script>
+	<script type="text/javascript">
+		var $backToTopEle = $('<a href="javascript:void(0)" class="Hui-iconfont toTop" title="返回顶部" alt="返回顶部" style="display:none">^</a>').appendTo($("body")).click(function() {
+			$("html, body").animate({ scrollTop: 0 }, 120);
+		});
+		var backToTopFun = function() {
+			var st = $(document).scrollTop(),
+				winh = $(window).height();
+			(st > 0) ? $backToTopEle.show(): $backToTopEle.hide();
+			if(!window.XMLHttpRequest) {
+				$backToTopEle.css("top", st + winh - 166);
+			}
+		};
+
+		$(function() {
+			$(window).on("scroll", backToTopFun);
+			backToTopFun();
+		});
+	</script>
+</body>
+</html>
